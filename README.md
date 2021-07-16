@@ -15,6 +15,7 @@ DEPLOY FRONT-END NETLIFY: https://fivesoftwaremovies.netlify.app/#/movies
 Para utilizar o sistema basta acessar o link do site https://fivesoftwaremovies.netlify.app/#/movies.
 
 Ao entrar pode demorar alguns segundos para o servidor do heroku acordar por ser uma versão gratuita;
+
 na tela inicial haverá uma lista com todos filmes cadastrados com as opções de editar e excluir, também é possivel fazer pesquisar por titulo e genero dos filmes e tem um link cadastre aqui para adicionar um filme na base de dados.
 
 E-mail: leandro_a_souza@hotmail.com
