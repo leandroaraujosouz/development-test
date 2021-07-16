@@ -7,15 +7,17 @@ Tecnologia Utilizada:
 <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="logo-TypeScript"/>
 
 repositorio do front-end: https://github.com/leandroaraujosouz/development-test-front
+
 DEPLOY BACK-END HEROKU: https://fivesoftwaremovies.herokuapp.com/swagger-ui.html
+
 DEPLOY FRONT-END NETLIFY: https://fivesoftwaremovies.netlify.app/#/movies
 
 Para utilizar o sistema basta acessar o link do site https://fivesoftwaremovies.netlify.app/#/movies.
+
 Ao entrar pode demorar alguns segundos para o servidor do heroku acordar por ser uma versão gratuita;
 na tela inicial haverá uma lista com todos filmes cadastrados com as opções de editar e excluir, também é possivel fazer pesquisar por titulo e genero dos filmes e tem um link cadastre aqui para adicionar um filme na base de dados.
 
-E-mail: rogerio.silva@tksolution.com
-LinkedIn: https://www.linkedin.com/in/rog%C3%A9rio-l%C3%BAcio-da-silva-b1b42ab2/
+E-mail: leandro_a_souza@hotmail.com
+LinkedIn: https://www.linkedin.com/in/leandro-as/
 
 
-Data de entrega: Até domingo (18/07) 23:59
