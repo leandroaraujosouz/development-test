@@ -1,9 +1,13 @@
 package com.fivesoftware.ecommerce.controller;
 
-import java.util.ArrayList;
-import java.util.List;
+
+
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -30,8 +34,8 @@ public class MoviesController {
 	private MoviesRepository repository;
 	
 	@GetMapping
-	public ResponseEntity<List<MoviesModel>> GetAll(){
-		return ResponseEntity.ok(repository.findAll());
+	public ResponseEntity<Page<MoviesModel>> GetAll(@PageableDefault(page=0, size=15, sort = "movieId", direction = Sort.Direction.ASC) Pageable pageable){
+		return ResponseEntity.ok(repository.findAll(pageable));
 	}
 
 	@GetMapping("/{id}")
@@ -42,13 +46,13 @@ public class MoviesController {
 	}
 	
 	@GetMapping("/titulo/{title}")
-	public ResponseEntity<List<MoviesModel>> GetByTitle(@PathVariable String title){
-		return ResponseEntity.ok(repository.findAllByTitleContainingIgnoreCase(title));
+	public ResponseEntity<Page<MoviesModel>> GetByTitle(@PageableDefault(page=0, size=15, sort = "movieId", direction = Sort.Direction.ASC) Pageable pageable, @PathVariable String title){
+		return ResponseEntity.ok(repository.findAllByTitleContainingIgnoreCase(pageable, title));
 	}
 	
 	@GetMapping("/genero/{genres}")
-	public ResponseEntity<List<MoviesModel>> GetByGenres(@PathVariable String genres){
-		return ResponseEntity.ok(repository.findAllByGenresContainingIgnoreCase(genres));
+	public ResponseEntity<Page<MoviesModel>> GetByGenres(@PageableDefault(page=0, size=15, sort = "movieId", direction = Sort.Direction.ASC) Pageable pageable, @PathVariable String genres){
+		return ResponseEntity.ok(repository.findAllByGenresContainingIgnoreCase(pageable, genres));
 	}
 	
 	@PostMapping
@@ -65,4 +69,6 @@ public class MoviesController {
 	public void delete(@PathVariable long id) {
 		repository.deleteById(id);
 	}
+	
 }
+
